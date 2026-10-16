@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Quiz Pipoca Gourmet — Desbloqueie seus presentes grátis</title>
+<meta name="description" content="Responda algumas perguntas rápidas e veja seu presente crescer a cada resposta. Leva menos de 3 minutos.">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&family=Karla:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<!-- ====== META PIXEL — Pipoca Gourmet 3208811619315993 ====== -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','3208811619315993');fbq('track','PageView');fbq('track','ViewContent');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=3208811619315993&ev=PageView&noscript=1"/></noscript>
+<!-- ====== /META PIXEL ====== -->
+
+<!-- ====== Microsoft Clarity (trocar CLARITY_BR_ID depois) ====== -->
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","CLARITY_BR_ID");
+</script>
+<!-- ====== /Clarity ====== -->
+
+<style>
+:root{
+  --bg:#fff8ef; --card:#fffdfa; --ink:#2a2320; --muted:#7c7067; --line:#eadfce;
+  --gold:#BE7A12; --gold2:#e39a26; --red:#d6453a; --green:#1f9d57; --accent:#BE7A12;
+  --sec:#fdeccb;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:Karla,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+.display{font-family:Fraunces,Georgia,serif}
+img{max-width:100%;display:block}
+.wrap{max-width:560px;margin:0 auto;padding:0 18px}
+
+/* header */
+header.bar{position:sticky;top:0;z-index:20;background:rgba(255,253,250,.96);backdrop-filter:blur(6px);border-bottom:1px dashed var(--line);padding:11px 0}
+.hrow{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.earn small{font-size:11px;font-weight:800;color:var(--gold);text-transform:uppercase;letter-spacing:.3px}
+.earn .amt{font-family:"Space Mono",ui-monospace,monospace;font-size:26px;font-weight:800;color:var(--gold);line-height:1;letter-spacing:-1px}
+.earn .amt sup{font-size:13px;opacity:.6;vertical-align:top}
+.level{flex:none;background:var(--sec);color:#6a4a0f;border-radius:999px;padding:7px 14px;font-size:12px;font-weight:800;white-space:nowrap}
+.pbar{position:relative;margin-top:11px;height:9px;border-radius:999px;background:var(--sec);overflow:visible}
+.pfill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--gold),var(--gold2));transition:width .5s}
+.pnub{position:absolute;top:-9px;font-size:16px;transition:left .5s;transform:translateX(-50%)}
+
+/* screen — top-aligned so the question + button stay near the top (mobile-friendly) */
+.screen{padding:16px 0 36px;animation:rise .35s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+h1.q{font-family:Fraunces,serif;font-weight:800;font-size:23px;line-height:1.28;margin:4px 0 2px}
+@media(min-width:480px){h1.q{font-size:26px}}
+.lede{font-size:17px;font-weight:600;margin:14px 0 0;color:var(--ink)}
+.hl{color:var(--gold);font-weight:900;white-space:nowrap}
+.hlr{color:var(--red);font-weight:900;white-space:nowrap;text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:3px}
+.hlg{color:var(--gold);font-weight:900;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:3px}
+.sub{color:var(--muted);font-size:14px;margin-top:10px}
+.hero-img{width:112%;margin:16px -6% 0;border-radius:16px}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;color:var(--gold)}
+
+/* options */
+.opts{display:flex;flex-direction:column;gap:11px;margin-top:20px}
+.opt{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:var(--card);border:1.5px solid var(--line);border-radius:15px;padding:16px 16px;font-size:15.5px;font-weight:700;color:var(--ink);cursor:pointer;transition:border-color .15s;box-shadow:0 1px 0 rgba(0,0,0,.02);touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.opt:active{border-color:var(--gold);background:var(--sec)}
+.opt .tick{flex:none;width:22px;height:22px;border-radius:50%;border:2px solid var(--line)}
+@media(hover:hover){.opt:hover{border-color:var(--gold);transform:translateY(-1px)}.opt:hover .tick{border-color:var(--gold)}}
+
+/* form */
+.field{margin-top:22px}
+.field label{display:block;font-weight:800;font-size:14px;margin-bottom:8px}
+.field input{width:100%;border:1.5px solid var(--line);border-radius:14px;padding:16px;font-size:16px;font-family:inherit;background:var(--card)}
+.field input:focus{outline:none;border-color:var(--gold)}
+
+/* reward chip */
+.reward{display:flex;align-items:center;gap:12px;background:#f3fbf4;border:1.5px solid #cdebd4;border-radius:15px;padding:14px 16px;margin-top:20px}
+.reward .emo{font-size:26px}
+.reward b{display:block;font-size:15px}
+.reward small{color:var(--green);font-weight:800}
+
+/* content cards */
+.tiles{display:grid;grid-template-columns:1fr;gap:11px;margin-top:20px}
+.tile{display:flex;gap:13px;align-items:flex-start;background:var(--card);border:1.5px solid var(--line);border-radius:15px;padding:15px}
+.tile .emo{font-size:24px;flex:none}
+.tile b{font-size:15.5px}
+.tile p{margin:3px 0 0;font-size:13.5px;color:var(--muted)}
+
+/* calc table */
+.calc{margin-top:20px;border:1.5px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card)}
+.calc .row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 15px;border-bottom:1px solid var(--line);font-size:14.5px}
+.calc .row:last-child{border-bottom:0}
+.calc .row .l{display:flex;align-items:center;gap:9px;font-weight:700;color:var(--muted)}
+.calc .row .v{font-weight:800;text-align:right}
+.calc .row.big{background:#fff6e6}
+.calc .row.big .v{color:var(--gold);font-size:17px}
+
+/* flavors */
+.flav{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+.fcard{background:var(--card);border:1.5px solid var(--line);border-radius:16px;overflow:hidden}
+.fcard img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.fcard .fb{padding:11px 12px}
+.fcard b{font-size:14.5px}
+.fcard p{margin:2px 0 0;font-size:12px;color:var(--muted)}
+
+/* timeline */
+.tl{margin-top:20px;display:flex;flex-direction:column;gap:14px}
+.tli{background:var(--card);border:1.5px solid var(--line);border-radius:16px;overflow:hidden}
+.tli img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.tli .tb{padding:14px 16px}
+.tli .phase{font-size:11px;font-weight:800;color:var(--gold);letter-spacing:.3px}
+.tli .ttl{font-family:Fraunces,serif;font-weight:800;font-size:17px;margin:2px 0 2px}
+.tli .stt{font-size:11px;font-weight:800;color:var(--green);text-transform:uppercase;letter-spacing:.3px}
+.tli p{margin:7px 0 0;font-size:13.5px;color:var(--muted)}
+
+/* loading */
+.load{text-align:center;padding:40px 0}
+.spin{width:54px;height:54px;border:5px solid var(--sec);border-top-color:var(--gold);border-radius:50%;margin:0 auto 20px;animation:sp 1s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.loadbar{height:9px;border-radius:999px;background:var(--sec);overflow:hidden;margin:18px auto 0;max-width:320px}
+.loadbar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold2));animation:lb 3.4s ease forwards}
+@keyframes lb{to{width:100%}}
+
+/* result / offer */
+.vwrap{margin-top:16px;border-radius:16px;overflow:hidden;background:#000;aspect-ratio:16/9}
+.vwrap iframe{width:100%;height:100%;border:0;display:block}
+.gifts{margin-top:18px;background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:16px}
+.gifts h3{font-family:Fraunces,serif;margin:0 0 10px;font-size:18px}
+.gline{display:flex;align-items:flex-start;gap:11px;padding:10px 0;border-bottom:1px dashed var(--line)}
+.gline:last-child{border-bottom:0}
+.gline .ge{font-size:20px;flex:none}
+.gline b{font-size:14.5px}
+.gline p{margin:2px 0 0;font-size:12.5px;color:var(--muted)}
+.gline .gv{flex:none;margin-left:auto;align-self:center;color:var(--muted);text-decoration:line-through;font-weight:800;font-size:13.5px}
+.gline.totalv{border-bottom:0;border-top:2px solid var(--line);margin-top:4px;padding-top:12px}
+.gline .gv.totalp{color:var(--gold);text-decoration:none;font-size:16px}
+.pricebox{margin-top:16px;text-align:center;background:#fff6e6;border:2px solid #f0d49a;border-radius:18px;padding:20px 16px}
+.pricebox .from{color:var(--muted);text-decoration:line-through;font-weight:700}
+.pricebox .now{font-family:Fraunces,serif;font-weight:900;font-size:44px;color:var(--gold);line-height:1}
+.pricebox .once{color:var(--muted);font-size:13px;margin-top:2px}
+
+/* instructor */
+.instr{display:flex;gap:14px;align-items:center;margin-top:18px;background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:14px}
+.instr img{width:92px;height:92px;flex:none;border-radius:14px;object-fit:cover}
+.instr b{font-family:Fraunces,serif;font-size:18px;display:block;margin-top:2px}
+.instr p{margin:5px 0 0;font-size:13px;color:var(--muted)}
+/* guarantee */
+.guar{display:flex;gap:14px;align-items:center;margin-top:16px;background:#f3fbf4;border:1.5px solid #cdebd4;border-radius:18px;padding:14px}
+.guar img{width:74px;height:74px;flex:none;object-fit:contain}
+.guar b{font-size:15.5px}
+.guar p{margin:4px 0 0;font-size:13px;color:var(--muted)}
+.ugc{margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ugc figure{margin:0;background:var(--card);border:1.5px solid var(--line);border-radius:16px;overflow:hidden}
+.ugc img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
+.ugc figcaption{font-size:12px;font-weight:700;color:var(--muted);padding:9px 10px;text-align:center}
+
+/* CTA — inline (sits right under the content) on quiz screens */
+.ctawrap{padding:12px 0 8px}
+.ctawrap .inner{max-width:none}
+/* offer screen — top-aligned + fixed sticky buy bar */
+body.offer .screen{padding:18px 0 150px}
+body.offer .ctawrap{position:fixed;left:0;right:0;bottom:0;z-index:40;background:linear-gradient(to top,var(--bg) 66%,transparent);padding:14px 18px 16px}
+body.offer .ctawrap .inner{max-width:560px;margin:0 auto}
+.cta{display:block;width:100%;text-align:center;background:linear-gradient(180deg,var(--gold2),var(--gold));color:#fff;text-decoration:none;font-weight:900;font-size:17px;border:0;border-radius:15px;padding:17px 18px;cursor:pointer;box-shadow:0 8px 22px rgba(190,122,18,.32);font-family:inherit;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.cta:active{transform:translateY(1px)}
+.cnote{text-align:center;font-size:11.5px;color:var(--muted);margin-top:8px}
+.urg{text-align:center;font-size:12px;font-weight:800;color:var(--red);margin-top:4px}
+.disc{font-size:10.5px;color:var(--muted);margin-top:14px;text-align:center;line-height:1.45}
+.center{text-align:center}
+</style>
+</head>
+<body>
+
+<header class="bar"><div class="wrap">
+  <div class="hrow">
+    <div class="earn">
+      <small>Responda e comece a ganhar</small>
+      <div class="amt"><sup>R$</sup><span id="earnAmt">0</span></div>
+    </div>
+    <span class="level"><span id="lvEmo">🌽</span> <span id="lvName">Iniciante</span></span>
+  </div>
+  <div class="pbar"><div class="pfill" id="pfill" style="width:4%"></div><span class="pnub" id="pnub" style="left:4%">🍿</span></div>
+</div></header>
+
+<main class="wrap">
+  <div id="screen" class="screen"></div>
+  <div class="ctawrap" id="ctawrap" style="display:none"><div class="inner">
+    <button class="cta" id="ctaBtn"></button>
+    <div class="cnote" id="cnote">⏱️ Leva menos de 3 minutos</div>
+  </div></div>
+</main>
+
+<script>
+/* ===== CONFIG ===== */
+var CHECKOUT_URL = "CAKTO_CHECKOUT_URL"; // << link pay.cakto.com.br do produto R$37
+var VIDEO_SRC = "";                      // << quando houver VSL, colar o nome do .mp4 aqui
+var PRICE = "37", PRICE_FROM = "362";
+
+/* ===== GAMIFICATION ===== */
+var LEVELS=[{at:0,name:"Iniciante",emoji:"🌽"},{at:60,name:"Pipoqueira",emoji:"🍿"},{at:120,name:"Gourmet",emoji:"👩‍🍳"},{at:160,name:"Chefe",emoji:"🏆"}];
+var earned=0, name="";
+function setEarn(add){ if(add){earned+=add;} document.getElementById('earnAmt').textContent=earned;
+  var lv=LEVELS[0]; for(var i=0;i<LEVELS.length;i++){ if(earned>=LEVELS[i].at) lv=LEVELS[i]; }
+  document.getElementById('lvName').textContent=lv.name; document.getElementById('lvEmo').textContent=lv.emoji; }
+
+/* ===== QUIZ DATA (localizado PT-BR · Pipoca Gourmet) ===== */
+var STEPS=[
+ {k:"intro",eyebrow:"Método Pipoca Gourmet · Renda extra da sua cozinha",
+  h:'Como Mulheres Comuns Estão Transformando <span class="hlg">R$5 de Milho</span> em <span class="hlg">R$12 o Saquinho</span> — e Faturando <span class="hlr">R$600+ por Semana</span> Direto da Própria Cozinha?',
+  img:"hero.webp",
+  lede:'É o <span class="hl">Método do Saquinho de R$12</span> — o jeito simples e digno de mulheres sem nenhuma experiência transformarem uma panela e uns R$5 de ingredientes em saquinhos gourmet que vendem por R$10 a R$15 e praticamente se vendem sozinhos. E a virada que quase ninguém faz na sua cidade: as <b>pipocas em bolinha decoradas</b>, que valem até 4x mais. Responda algumas perguntas rápidas e desbloqueie presentes grátis pra já começar essa semana — <b>mesmo que você nunca tenha cozinhado, nunca tenha vendido nada e não tenha dinheiro pra investir.</b>',
+  note:"Como receber seus presentes: responda abaixo em menos de 3 minutos. Cada resposta aumenta o seu pacote de presentes grátis e libera o seu acesso exclusivo no final!",
+  cta:"Quero meus presentes"},
+
+ {k:"form",h:"Qual nome colocamos no seu presente?",label:"Seu primeiro nome",cta:"Continuar"},
+ {k:"reward",emo:"🎁",title:"Presente reservado no seu nome",val:19},
+
+ {k:"q",h:"{nome}, você já trabalhou com produtos artesanais como pipoca gourmet ou docinhos antes?",
+  opts:["Sim, já sou profissional.","Sim, faço como hobby ou pra renda extra.","Não, mas quero aprender pra começar a ganhar dinheiro.","Não, só quero aprender por diversão, como hobby."]},
+
+ {k:"q",h:"Que tipo de lugar você mora hoje?",
+  opts:["Capital ou cidade grande","Cidade média ou região metropolitana","Cidade pequena","Zona rural ou interior"]},
+
+ {k:"reward",emo:"📍",title:"Mapa de vendas da sua região",val:29,
+  head:"Perfeito! Você acertou em cheio com a sua região, {nome} 📍",
+  body:"As pessoas por aí amam docinhos únicos e feitos à mão. Com um produto premium que praticamente se vende sozinho, você tem potencial pra faturar pelo menos <b>R$600 por semana</b> em feiras, eventos da sua cidade, encomendas de festa ou ali mesmo na sua vizinhança!"},
+
+ {k:"q",h:"Você está trabalhando ou tem alguma renda hoje?",
+  opts:["Não, não estou.","Sim, tenho um emprego.","Faço uns bicos / renda extra."]},
+
+ {k:"q",h:"{nome}, qual dessas opções descreve melhor a sua situação hoje?",
+  opts:["Tenho um emprego, mas preciso de uma renda extra pra ajudar nas contas.","Tô esgotada no trabalho e quero mais liberdade e flexibilidade.","Tô desempregada e preciso urgente de um jeito rápido de ganhar dinheiro.","Tô bem financeiramente, só procuro um hobby divertido."]},
+
+ {k:"q",h:"Qual é o seu nível com pipoca gourmet e as bolinhas decoradas?",
+  opts:["Sou totalmente iniciante, não sei nem por onde começar.","Já vi como faz, mas nunca tentei.","Já tentei algumas vezes, mas nunca fica bom.","Tenho experiência, mas quero aprender as técnicas profissionais."]},
+
+ {k:"tiles",h:"Por que a Pipoca Gourmet ganha de doces comuns (brigadeiro, bolo no pote, cookie)",cta:"Faz sentido, continuar",
+  tiles:[
+   {e:"⏳",t:"Dura até 20 dias",p:"Faz uma leva num único dia e tem estoque pra vender a semana inteira, sem medo de murchar ou amolecer."},
+   {e:"🎓",t:"Fácil de aprender",p:"Técnicas rápidas e à prova de erro. Você nem precisa saber cozinhar pra ver lucro já na primeira semana."},
+   {e:"🛒",t:"Ingredientes simples",p:"Tudo que você precisa está no mercado da esquina. Sem equipamento caro."},
+   {e:"🛍️",t:"Vende do seu jeito",p:"Começa vendendo pra vizinhança, pega encomendas grandes de festa ou monta sua própria marca premium."},
+   {e:"⚡",t:"Produção rápida",p:"Faz dezenas de saquinhos de uma vez só, usando a panela que você já tem em casa."},
+   {e:"🎯",t:"Quase zero concorrência",p:"Domina o Instagram, as feiras e os apps de delivery e lucra até 4x mais que as confeiteiras tradicionais."}
+  ]},
+
+ {k:"reward",emo:"🍿",title:"Aula: o passo a passo do saquinho de R$12",val:37},
+
+ {k:"calc",h:"{nome}, olha essa conta simples pra você ver a força real da pipoca gourmet",cta:"Quero esses resultados",
+  rows:[
+   {e:"🛒",l:"Custo pra fazer",v:"R$1 a R$2 por saquinho"},
+   {e:"🏷️",l:"Preço de venda",v:"R$10 a R$15"},
+   {e:"💰",l:"Lucro puro por saquinho",v:"R$9 a R$13"},
+   {e:"📅",l:"Vendendo 10 saquinhos/dia (a R$12)",v:"R$120 por dia"},
+   {e:"🚀",l:"Em 25 dias × R$120",v:"R$3.000 por mês!",big:true}
+  ],
+  foot:"Nesse exemplo, você cozinhou tudo em apenas 1 dia da semana e só focou em vender no resto do tempo. E é uma conta bem realista — sem contar as encomendas grandes de festas e eventos!"},
+
+ {k:"q",h:"Você já fez algum curso online antes?",
+  opts:["Sim, e terminei até o fim.","Comecei um, mas nunca terminei.","Não, nunca fiz."]},
+
+ {k:"q",h:"{nome}, durante esse treinamento, você vai ter alguém pra te apoiar emocional ou financeiramente?",
+  opts:["Sim, com certeza.","Talvez.","Não, vou fazer isso totalmente sozinha."]},
+
+ {k:"note",emo:"🤝",h:"Fica tranquila! Nosso foco é deixar tudo simples e fácil de seguir",
+  body:"Mesmo com pouco conhecimento, zero experiência ou sem ninguém pra apoiar, você nunca vai estar sozinha nisso. Aqui você aprende a trabalhar da sua própria cozinha, vendendo um docinho premium que vale 4x mais que os doces tradicionais.",cta:"Continuar"},
+
+ {k:"reward",emo:"✅",title:"Checklist Anti-Erro (nunca perca uma leva)",val:19},
+
+ {k:"flavors",h:"Esses são só alguns dos 60+ sabores gourmet campeões de venda que você vai dominar",cta:"Quero fazer esses",
+  items:[
+   {img:"oreo.webp",t:"Oreo",p:"Um clássico que todo mundo ama"},
+   {img:"kinderbueno.webp",t:"Kinder Bueno",p:"Sabor exclusivo e sofisticado"},
+   {img:"nutella.webp",t:"Nutella",p:"O creme de avelã favorito de todo mundo"},
+   {img:"pink-lemonade.webp",t:"Morango",p:"Docinho, colorido e irresistível"},
+   {img:"milk-cream.webp",t:"Leite Ninho",p:"Cremoso, nostálgico e campeão"},
+   {img:"salted-caramel.webp",t:"Caramelo Salgado",p:"O equilíbrio perfeito entre doce e salgado"}
+  ]},
+
+ {k:"q",h:"Qual dessas frases descreve melhor o seu momento hoje?",
+  opts:["“Preciso urgente da minha independência financeira pra parar de viver contando os dias pro salário.”","“Quero um negócio lucrativo que seja 100% meu pra nunca mais depender do dinheiro dos outros.”","“Tô me reinventando e quero provar que consigo ter sucesso do meu jeito.”","“Já trabalho muito, mas preciso de algo de margem alta pra recuperar meu tempo.”"]},
+
+ {k:"q",h:"Se você estivesse faturando R$3.000 a mais por mês com pipoca gourmet, o que faria primeiro com esse dinheiro, {nome}?",
+  opts:["Pedir demissão do meu emprego.","Abrir minha própria loja de pipoca e trabalhar pra mim.","Pagar minhas contas e finalmente ter paz financeira.","Montar uma reserva pra viver mais tranquila."]},
+
+ {k:"reward",emo:"🎉",title:"Guia definitivo de festas e encomendas",val:37},
+
+ {k:"timeline",h:"Preciso de talento, experiência ou dinheiro pra começar? A resposta é NÃO!",cta:"Entendi, continuar",
+  lede:"Com o método da Carla, você aprende todo o processo passo a passo. Dá pra começar do zero absoluto, usando só o que você já tem na sua cozinha.",
+  items:[
+   {img:"bullets1.webp",phase:"DIA 1",t:"Só uma panela",s:"COMECE HOJE",p:"Você começa com o que já tem na cozinha, sem equipamento caro."},
+   {img:"bullets2.webp",phase:"DIA 3",t:"Não precisa de experiência",s:"QUALQUER UMA CONSEGUE",p:"Aulas simples e diretas. Em poucos dias você faz seus primeiros saquinhos perfeitos."},
+   {img:"bullets3.webp",phase:"SEMANA 1",t:"Você define o preço",s:"MERCADO SEM CONCORRÊNCIA",p:"Você escolhe quanto cobrar. Produto artesanal de alto valor percebido e pouca concorrência."},
+   {img:"bullets4.webp",phase:"SEMANA 2",t:"Venda pelos apps",s:"VENDAS SEM SAIR DE CASA",p:"As encomendas começam a chegar todo dia, direto da sua cozinha pros apps de delivery."},
+   {img:"bullets5.webp",phase:"MÊS 1",t:"Encomendas grandes",s:"FESTAS, EVENTOS, EMPRESAS",p:"Você começa a pegar encomendas grandes de festas e eventos. É aí que vira renda de verdade."}
+  ]},
+
+ {k:"reward",emo:"📈",title:"Seu mapa de faturamento dos primeiros 30 dias",val:37},
+
+ {k:"q",h:"Se você desbloquear esses presentes grátis, promete aproveitar essa oportunidade ao máximo?",
+  opts:["Talvez.","Provavelmente.","Sim, com certeza!"]},
+
+ {k:"q",h:"{nome}, você está pronta pra ter resultados como as mulheres que já estão lucrando com pipoca gourmet todo mês?",
+  opts:["Talvez!","SIM!","COM CERTEZA!"]},
+
+ {k:"loading",h:"Aguarde enquanto seus resultados e presentes grátis estão sendo gerados...",sub:"Desbloqueando seus presentes..."},
+
+ {k:"result"}
+];
+
+/* ===== ENGINE ===== */
+var idx=0, total=STEPS.length;
+var scr=document.getElementById('screen');
+var ctawrap=document.getElementById('ctawrap'), ctaBtn=document.getElementById('ctaBtn'), cnote=document.getElementById('cnote');
+var pfill=document.getElementById('pfill'), pnub=document.getElementById('pnub');
+
+function p(s){ return (s||"").split("{nome}").join(name||"amiga"); }
+function progress(){ var pct=Math.max(4, Math.round((idx/(total-1))*100)); pfill.style.width=pct+"%"; pnub.style.left=pct+"%"; }
+function showCTA(label,note){ ctawrap.style.display="block"; ctaBtn.textContent=label; cnote.innerHTML=note||"⏱️ Leva menos de 3 minutos"; }
+function hideCTA(){ ctawrap.style.display="none"; }
+function next(){ idx++; if(idx>=total) idx=total-1; render(); window.scrollTo(0,0); }
+
+function render(){
+  var s=STEPS[idx]; progress(); hideCTA(); var html="";
+  document.body.classList.toggle('offer', s.k==="result");
+
+  if(s.k==="intro"){
+    html+='<div class="eyebrow">'+s.eyebrow+'</div>';
+    html+='<h1 class="q" style="margin-top:6px">'+s.h+'</h1>';
+    html+='<img class="hero-img" src="'+s.img+'" alt="Pipoca gourmet em saquinho de presente">';
+    html+='<p class="lede">'+s.lede+'</p>';
+    html+='<div class="sub">'+s.note+'</div>';
+    scr.innerHTML=html; showCTA(s.cta+" →"); ctaBtn.onclick=next; return;
+  }
+
+  if(s.k==="form"){
+    html+='<h1 class="q">'+p(s.h)+'</h1>';
+    html+='<div class="field"><label>'+s.label+'</label><input id="nmeInp" type="text" autocomplete="given-name" placeholder="Digite aqui..."></div>';
+    scr.innerHTML=html;
+    var inp=document.getElementById('nmeInp'); inp.focus();
+    showCTA(s.cta+" →");
+    ctaBtn.onclick=function(){ var v=inp.value.trim(); if(!v){inp.focus();return;} name=v.split(" ")[0]; next(); };
+    inp.addEventListener('keydown',function(e){ if(e.key==="Enter") ctaBtn.click(); });
+    return;
+  }
+
+  if(s.k==="reward"){
+    if(s.head) html+='<h1 class="q">'+p(s.head)+'</h1>';
+    if(s.body) html+='<p class="lede" style="font-size:15.5px">'+p(s.body)+'</p>';
+    html+='<div class="reward"><span class="emo">'+s.emo+'</span><div><b>'+s.title+'</b><small>+ R$'+s.val+' no seu presente 🎉</small></div></div>';
+    scr.innerHTML=html; setEarn(s.val);
+    showCTA("Continuar →"); ctaBtn.onclick=next; return;
+  }
+
+  if(s.k==="q"){
+    html+='<h1 class="q">'+p(s.h)+'</h1><div class="opts">';
+    s.opts.forEach(function(o){ html+='<button class="opt"><span class="tick"></span><span>'+o+'</span></button>'; });
+    html+='</div>';
+    scr.innerHTML=html;
+    [].forEach.call(scr.querySelectorAll('.opt'),function(b){ b.onclick=next; });
+    return;
+  }
+
+  if(s.k==="note"){
+    html+='<div class="center" style="font-size:40px">'+s.emo+'</div>';
+    html+='<h1 class="q center">'+p(s.h)+'</h1>';
+    html+='<p class="lede">'+p(s.body)+'</p>';
+    scr.innerHTML=html; showCTA(s.cta+" →"); ctaBtn.onclick=next; return;
+  }
+
+  if(s.k==="tiles"){
+    html+='<h1 class="q">'+p(s.h)+'</h1><div class="tiles">';
+    s.tiles.forEach(function(t){ html+='<div class="tile"><span class="emo">'+t.e+'</span><div><b>'+t.t+'</b><p>'+t.p+'</p></div></div>'; });
+    html+='</div>';
+    scr.innerHTML=html; showCTA(s.cta+" →"); ctaBtn.onclick=next; return;
+  }
+
+  if(s.k==="calc"){
+    html+='<h1 class="q">'+p(s.h)+'</h1><div class="calc">';
+    s.rows.forEach(function(r){ html+='<div class="row'+(r.big?' big':'')+'"><span class="l">'+r.e+' '+r.l+'</span><span class="v">'+r.v+'</span></div>'; });
+    html+='</div><p class="sub">'+s.foot+'</p>';
+    scr.innerHTML=html; showCTA(s.cta+" →"); ctaBtn.onclick=next; return;
+  }
+
+  if(s.k==="flavors"){
+    html+='<h1 class="q">'+p(s.h)+'</h1><div class="flav">';
+    s.items.forEach(function(f){ html+='<div class="fcard"><img loading="lazy" src="'+f.img+'" alt="'+f.t+'"><div class="fb"><b>'+f.t+'</b><p>'+f.p+'</p></div></div>'; });
+    html+='</div>';
+    scr.innerHTML=html; showCTA(s.cta+" →"); ctaBtn.onclick=next; return;
+  }
+
+  if(s.k==="timeline"){
+    html+='<h1 class="q">'+p(s.h)+'</h1><p class="lede" style="font-size:15.5px">'+p(s.lede)+'</p><div class="tl">';
+    s.items.forEach(function(t){ html+='<div class="tli"><img loading="lazy" src="'+t.img+'" alt="'+t.t+'"><div class="tb"><div class="phase">'+t.phase+'</div><div class="ttl">'+t.t+'</div><div class="stt">'+t.s+'</div><p>'+t.p+'</p></div></div>'; });
+    html+='</div>';
+    scr.innerHTML=html; showCTA(s.cta+" →"); ctaBtn.onclick=next; return;
+  }
+
+  if(s.k==="loading"){
+    html+='<div class="load"><div class="spin"></div><h1 class="q center">'+p(s.h)+'</h1><div class="loadbar"><i></i></div><p class="sub center" style="margin-top:14px">'+s.sub+'</p></div>';
+    scr.innerHTML=html; hideCTA();
+    setTimeout(next,3500); return;
+  }
+
+  if(s.k==="result"){
+    html+='<div class="center"><div class="eyebrow">🎉 Presentes desbloqueados</div>';
+    html+='<h1 class="q" style="margin-top:6px">Prontinho, '+(name||"amiga")+'! Você desbloqueou R$'+earned+' em presentes grátis dentro do Método Pipoca Gourmet</h1></div>';
+    html+='<p class="lede center" style="font-size:15px">Tudo abaixo está reservado no seu nome. Toque no botão e receba acesso na hora — comece a sua primeira leva ainda essa semana.</p>';
+    if(VIDEO_SRC){ html+='<div class="vwrap"><video controls playsinline poster="hero.webp" style="width:100%;height:100%;object-fit:cover"><source src="'+VIDEO_SRC+'" type="video/mp4"></video></div>'; }
+    // Instructor
+    html+='<div class="instr"><img loading="lazy" src="instr.webp" alt="Carla Mendes — Especialista em Pipoca Gourmet"><div><div class="eyebrow">Sua instrutora</div><b>Carla Mendes</b><p>Especialista em pipoca gourmet. Ela te guia por todo o processo passo a passo — da sua primeira leva até as encomendas grandes.</p></div></div>';
+    html+='<div class="center" style="margin-top:20px"><div class="eyebrow">Uma espiada por dentro do método</div></div>';
+    html+='<div class="ugc">'+
+      '<figure><img loading="lazy" src="gift-recipes.webp" alt="60+ receitas gourmet"><figcaption>60+ receitas gourmet</figcaption></figure>'+
+      '<figure><img loading="lazy" src="gift-kit.webp" alt="Kit de embalagem premium"><figcaption>Embalagem que vende sozinha</figcaption></figure>'+
+      '<figure><img loading="lazy" src="proof-market.webp" alt="Vendendo em feira"><figcaption>Venda em feiras e eventos</figcaption></figure>'+
+      '<figure><img loading="lazy" src="ingredients.webp" alt="Ingredientes simples"><figcaption>Ingredientes simples, uma panela</figcaption></figure>'+
+      '</div>';
+    html+='<div class="gifts"><h3>Tudo que você recebe no Método Pipoca Gourmet</h3>'+
+      gline("🍿","Receitas que se vendem sozinhas","Mais de 60 sabores gourmet campeões de venda, passo a passo.","R$97")+
+      gline("⏳","O segredo da crocância de 20 dias","A técnica exata pra manter sua pipoca crocante por 20 dias sem murchar.","R$47")+
+      gline("🎁","Playbook da embalagem premium","Como deixar seus saquinhos com cara de luxo pra cobrar 4x mais, fácil.","R$37")+
+      gline("📱","Legendas prontas (copia e cola)","Posts prontos — é só copiar, colar e vender todo dia.","R$47")+
+      gline("🎉","Guia definitivo de festas","Como fechar encomendas grandes e faturar a renda de um mês em um dia só.","R$67")+
+      gline("🚀","Negócio do zero em 7 dias","O plano exato pra começar hoje e pegar suas primeiras clientes em 7 dias.","R$67")+
+      '<div class="gline totalv"><span class="ge">🧾</span><div><b>Valor total</b><p>Tudo acima, se vendido separado</p></div><span class="gv totalp">R$362</span></div>'+
+      '</div>';
+    html+='<div class="pricebox"><div class="from">Valor total R$362</div><div class="now">R$'+PRICE+'</div><div class="once">Pagamento único · acesso vitalício na hora · sem mensalidade</div></div>';
+    // Guarantee
+    html+='<div class="guar"><img loading="lazy" src="7days.webp" alt="Garantia de 7 dias"><div><b>Garantia de 7 dias "Amou ou é de graça"</b><p>Entre no método e faça a sua primeira leva. Se em 7 dias você não estiver animada, é só mandar um e-mail que devolvemos 100% do valor — e você <b>fica com todos os bônus</b>. Todo o risco é nosso, não seu.</p></div></div>';
+    html+='<p class="sub center">Depois do pagamento, você recebe no WhatsApp/e-mail o acesso à plataforma online.</p>';
+    html+='<div class="disc">Resultados não são garantidos e variam de pessoa pra pessoa. Os valores mostrados são exemplos ilustrativos, não uma promessa de ganhos. Este é um produto educacional.</div>';
+    scr.innerHTML=html;
+    showCTA("Quero meus presentes →","🔒 Checkout seguro · acesso na hora");
+    cnote.innerHTML="🔒 Checkout seguro · acesso na hora";
+    var u=document.createElement('div'); u.className='urg'; u.textContent='⏳ Preço de lançamento — só nesta rodada, depois volta a subir'; cnote.parentNode.insertBefore(u,cnote.nextSibling);
+    ctaBtn.onclick=function(){
+      try{ if(window.fbq) fbq('track','InitiateCheckout',{value:parseFloat(PRICE),currency:'BRL'}); }catch(e){}
+      if(CHECKOUT_URL && CHECKOUT_URL.indexOf('http')===0){ location.href=CHECKOUT_URL+(location.search||""); }
+    };
+    return;
+  }
+}
+function gline(e,t,p,v){ return '<div class="gline"><span class="ge">'+e+'</span><div><b>'+t+'</b><p>'+p+'</p></div>'+(v?'<span class="gv">'+v+'</span>':'')+'</div>'; }
+
+setEarn(0); render();
+</script>
+</body>
+</html>
