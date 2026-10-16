@@ -163,13 +163,12 @@ h1.q{font-family:Fraunces,serif;font-weight:800;font-size:23px;line-height:1.28;
 .ugc img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
 .ugc figcaption{font-size:12px;font-weight:700;color:var(--muted);padding:9px 10px;text-align:center}
 
-/* CTA — fixed sticky bar at the bottom of the viewport on EVERY screen (always visible) */
-.ctawrap{position:fixed;left:0;right:0;bottom:0;z-index:40;background:linear-gradient(to top,var(--bg) 70%,transparent);padding:12px 18px 16px}
+/* CTA — on quiz screens it sits INLINE right under the content (button follows what you just filled) */
+.ctawrap{padding:18px 0 10px}
 .ctawrap .inner{max-width:560px;margin:0 auto}
-/* leave room so content never hides behind the fixed CTA */
-.screen{padding-bottom:132px}
-/* offer screen — a bit more room for the taller note */
-body.offer .screen{padding:18px 0 150px}
+/* intro & offer are LONG → fixed sticky bar at the bottom so the button is always visible */
+body.intro .ctawrap,body.offer .ctawrap{position:fixed;left:0;right:0;bottom:0;z-index:40;background:linear-gradient(to top,var(--bg) 70%,transparent);padding:12px 18px 16px}
+body.intro .screen,body.offer .screen{padding-bottom:140px}
 .cta{display:block;width:100%;text-align:center;background:linear-gradient(180deg,var(--gold2),var(--gold));color:#fff;text-decoration:none;font-weight:900;font-size:17px;border:0;border-radius:15px;padding:17px 18px;cursor:pointer;box-shadow:0 8px 22px rgba(190,122,18,.32);font-family:inherit;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 .cta:active{transform:translateY(1px)}
 .cnote{text-align:center;font-size:11.5px;color:var(--muted);margin-top:8px}
@@ -334,6 +333,7 @@ function next(){ idx++; if(idx>=total) idx=total-1; render(); window.scrollTo(0,
 function render(){
   var s=STEPS[idx]; progress(); hideCTA(); var html="";
   document.body.classList.toggle('offer', s.k==="result");
+  document.body.classList.toggle('intro', s.k==="intro");
 
   if(s.k==="intro"){
     html+='<div class="eyebrow">'+s.eyebrow+'</div>';
