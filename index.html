@@ -162,6 +162,26 @@ h1.q{font-family:Fraunces,serif;font-weight:800;font-size:23px;line-height:1.28;
 .ugc figure{margin:0;background:var(--card);border:1.5px solid var(--line);border-radius:16px;overflow:hidden}
 .ugc img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}
 .ugc figcaption{font-size:12px;font-weight:700;color:var(--muted);padding:9px 10px;text-align:center}
+/* how it works — 3 steps */
+.steps{margin-top:14px;display:grid;gap:10px}
+.step{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:13px 14px}
+.step .n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--gold);color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:15px}
+.step b{font-size:14.5px}
+.step p{margin:3px 0 0;font-size:13px;color:var(--muted)}
+/* social proof — WhatsApp-style prints */
+.proof{margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.proof figure{margin:0;background:#e5ddd5;border:1.5px solid var(--line);border-radius:16px;overflow:hidden}
+.proof img{width:100%;display:block}
+.sealrow{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:14px}
+.seal{font-size:12px;font-weight:800;color:var(--muted);background:var(--card);border:1.5px solid var(--line);border-radius:999px;padding:7px 12px}
+/* FAQ */
+.faq{margin-top:16px;display:grid;gap:8px}
+.faq details{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:0 14px}
+.faq summary{list-style:none;cursor:pointer;font-weight:800;font-size:14px;padding:14px 0;position:relative;padding-right:24px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:2px;top:12px;font-size:20px;color:var(--gold);font-weight:900}
+.faq details[open] summary::after{content:"–"}
+.faq p{margin:0 0 14px;font-size:13.5px;color:var(--muted);line-height:1.5}
 
 /* CTA — on quiz screens it sits INLINE right under the content (button follows what you just filled) */
 .ctawrap{padding:18px 0 10px}
@@ -428,6 +448,21 @@ function render(){
       '<figure><img loading="lazy" src="proof-market.webp" alt="Vendendo em feira"><figcaption>Venda em feiras e eventos</figcaption></figure>'+
       '<figure><img loading="lazy" src="ingredients.webp" alt="Ingredientes simples"><figcaption>Ingredientes simples, uma panela</figcaption></figure>'+
       '</div>';
+    // How it works — concrete digital delivery
+    html+='<div class="center" style="margin-top:22px"><div class="eyebrow">Como funciona</div><h1 class="q" style="font-size:22px;margin-top:4px">Do pagamento à sua primeira venda</h1></div>';
+    html+='<div class="steps">'+
+      '<div class="step"><span class="n">1</span><div><b>Você garante o acesso</b><p>Pagamento único de R$'+PRICE+', na hora, pelo Pix ou cartão. Sem mensalidade.</p></div></div>'+
+      '<div class="step"><span class="n">2</span><div><b>Recebe o acesso na hora</b><p>Assim que o pagamento cai, chega no seu WhatsApp e e-mail o link da plataforma online — vídeos, receitas e guias, tudo liberado na mesma hora.</p></div></div>'+
+      '<div class="step"><span class="n">3</span><div><b>Faz a primeira leva essa semana</b><p>Segue o passo a passo, monta seus primeiros saquinhos com uma panela que você já tem e começa a vender pra quem está do seu lado.</p></div></div>'+
+      '</div>';
+    // Social proof — real WhatsApp prints (Bruno drops depo1..depo4.webp; slots hide until then)
+    html+='<div class="center" style="margin-top:22px"><div class="eyebrow">Quem já começou</div><h1 class="q" style="font-size:22px;margin-top:4px">Resultados de alunas reais</h1></div>';
+    html+='<div class="proof" id="proofGrid">'+
+      '<figure><img loading="lazy" src="depo1.webp" alt="Depoimento de aluna" onerror="this.closest(\'figure\').style.display=\'none\'"></figure>'+
+      '<figure><img loading="lazy" src="depo2.webp" alt="Depoimento de aluna" onerror="this.closest(\'figure\').style.display=\'none\'"></figure>'+
+      '<figure><img loading="lazy" src="depo3.webp" alt="Depoimento de aluna" onerror="this.closest(\'figure\').style.display=\'none\'"></figure>'+
+      '<figure><img loading="lazy" src="depo4.webp" alt="Depoimento de aluna" onerror="this.closest(\'figure\').style.display=\'none\'"></figure>'+
+      '</div>';
     html+='<div class="gifts"><h3>Tudo que você recebe no Método Pipoca Gourmet</h3>'+
       gline("🍿","Receitas que se vendem sozinhas","Mais de 60 sabores gourmet campeões de venda, passo a passo.","R$97")+
       gline("⏳","O segredo da crocância de 20 dias","A técnica exata pra manter sua pipoca crocante por 20 dias sem murchar.","R$47")+
@@ -440,8 +475,19 @@ function render(){
     html+='<div class="pricebox"><div class="from">Valor total R$362</div><div class="now">R$'+PRICE+'</div><div class="once">Pagamento único · acesso vitalício na hora · sem mensalidade</div></div>';
     // Guarantee
     html+='<div class="guar"><img loading="lazy" src="7days.webp" alt="Garantia de 7 dias"><div><b>Garantia de 7 dias "Amou ou é de graça"</b><p>Entre no método e faça a sua primeira leva. Se em 7 dias você não estiver animada, é só mandar um e-mail que devolvemos 100% do valor — e você <b>fica com todos os bônus</b>. Todo o risco é nosso, não seu.</p></div></div>';
-    html+='<p class="sub center">Depois do pagamento, você recebe no WhatsApp/e-mail o acesso à plataforma online.</p>';
-    html+='<div class="disc">Resultados não são garantidos e variam de pessoa pra pessoa. Os valores mostrados são exemplos ilustrativos, não uma promessa de ganhos. Este é um produto educacional.</div>';
+    html+='<div class="sealrow"><span class="seal">🔒 Compra segura</span><span class="seal">⚡ Acesso imediato</span><span class="seal">♾️ Vitalício</span><span class="seal">↩️ 7 dias de garantia</span></div>';
+    // FAQ — objection crushing
+    html+='<div class="center" style="margin-top:22px"><div class="eyebrow">Ainda com dúvida?</div><h1 class="q" style="font-size:22px;margin-top:4px">Perguntas que todo mundo faz</h1></div>';
+    html+='<div class="faq">'+
+      faq("Nunca cozinhei na vida. Vou conseguir?","Sim. O método foi feito justamente pra quem está começando do zero. É tudo em vídeo e passo a passo, com uma panela comum que você já tem em casa. Se souber mexer uma panela, você faz.")+
+      faq("Como eu recebo o acesso?","É um produto 100% digital. Assim que o pagamento é aprovado, você recebe na hora, no seu WhatsApp e e-mail, o link da plataforma online com todos os vídeos, receitas e guias. Nada é enviado pelo correio.")+
+      faq("Preciso de equipamento ou ingrediente caro?","Não. Você começa com uma panela, milho de pipoca e poucos ingredientes que custam alguns reais. A ideia é começar barato e reinvestir conforme for vendendo.")+
+      faq("Pra quem eu vendo?","Pra quem está do seu lado: família, vizinhos, grupo da escola, condomínio, igreja, feiras — e online no Instagram, iFood, Mercado Livre, Shopee e TikTok Shop. O método mostra como anunciar em cada canal.")+
+      faq("É pagamento único mesmo?","Sim. Você paga R$"+PRICE+" uma vez só e o acesso é vitalício, sem mensalidade. Toda atualização futura entra de graça pra você.")+
+      faq("E se eu não gostar?","Você tem 7 dias de garantia. Entra, testa, faz a primeira leva. Se não for pra você, manda um e-mail e devolvemos 100% — e você ainda fica com os bônus.")+
+      '</div>';
+    html+='<p class="sub center" style="margin-top:16px">Depois do pagamento, você recebe no WhatsApp e no e-mail o acesso à plataforma online — na hora.</p>';
+    html+='<div class="disc">Resultados não são garantidos e variam de pessoa pra pessoa. Os valores mostrados são exemplos ilustrativos, não uma promessa de ganhos. Este é um produto educacional digital.</div>';
     scr.innerHTML=html;
     showCTA("Quero meus presentes →","🔒 Checkout seguro · acesso na hora");
     cnote.innerHTML="🔒 Checkout seguro · acesso na hora";
@@ -454,6 +500,7 @@ function render(){
   }
 }
 function gline(e,t,p,v){ return '<div class="gline"><span class="ge">'+e+'</span><div><b>'+t+'</b><p>'+p+'</p></div>'+(v?'<span class="gv">'+v+'</span>':'')+'</div>'; }
+function faq(q,a){ return '<details><summary>'+q+'</summary><p>'+a+'</p></details>'; }
 
 setEarn(0); render();
 </script>
