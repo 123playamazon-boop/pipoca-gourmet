@@ -338,7 +338,7 @@ function render(){
   if(s.k==="intro"){
     html+='<div class="eyebrow">'+s.eyebrow+'</div>';
     html+='<h1 class="q" style="margin-top:6px">'+s.h+'</h1>';
-    if(s.vid){ html+='<video class="hero-img" src="'+s.vid+'" poster="'+(s.poster||s.img)+'" autoplay muted loop playsinline preload="metadata" style="aspect-ratio:9/16;object-fit:cover;max-height:72vh;margin:16px auto 0;width:auto;max-width:100%"></video>'; }
+    if(s.vid){ html+='<video class="hero-img" src="'+s.vid+'" poster="'+(s.poster||s.img)+'" autoplay muted loop playsinline preload="metadata" style="display:block;aspect-ratio:9/16;object-fit:contain;background:#000;max-height:52vh;margin:14px auto 0;width:auto;max-width:300px;border-radius:16px"></video>'; }
     else { html+='<img class="hero-img" src="'+s.img+'" alt="Pipoca gourmet em saquinho de presente">'; }
     html+='<p class="lede">'+s.lede+'</p>';
     html+='<div class="sub">'+s.note+'</div>';
