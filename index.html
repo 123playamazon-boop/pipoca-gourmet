@@ -217,6 +217,7 @@ var STEPS=[
  {k:"intro",eyebrow:"Método Pipoca Gourmet · O doce que bombou nos EUA",
   h:'Enquanto o Brasil briga com brigadeiro e bolo no pote, um docinho que <span class="hlg">virou febre nos EUA</span> chegou aqui <span class="hlg">quase sem concorrência</span> — e já está colocando <span class="hlr">R$600+ por semana</span> no bolso de mulheres que <b>nunca cozinharam na vida</b>.',
   img:"hero.webp",
+  vid:"ad1.mp4", poster:"ad1-poster.webp",
   lede:'É a <span class="hl">pipoca gourmet decorada no estilo americano</span> — o mesmo docinho que vende por US$8 o saquinho lá fora e viralizou no TikTok. Aqui no Brasil, quase ninguém faz ainda. Com uma panela e uns R$5 de ingredientes, você monta saquinhos que vendem por R$10 a R$15 e <b>praticamente se vendem sozinhos</b> — porque é bonito, é diferente e ninguém está cansado de ver. Responda algumas perguntas rápidas e desbloqueie presentes grátis pra começar essa semana — <b>mesmo que você nunca tenha cozinhado, nunca tenha vendido nada e não tenha nem R$50 pra investir.</b>',
   note:"Como receber seus presentes: responda abaixo em menos de 3 minutos. Cada resposta aumenta o seu pacote de presentes grátis e libera o seu acesso exclusivo no final!",
   cta:"Quero meus presentes"},
@@ -337,7 +338,8 @@ function render(){
   if(s.k==="intro"){
     html+='<div class="eyebrow">'+s.eyebrow+'</div>';
     html+='<h1 class="q" style="margin-top:6px">'+s.h+'</h1>';
-    html+='<img class="hero-img" src="'+s.img+'" alt="Pipoca gourmet em saquinho de presente">';
+    if(s.vid){ html+='<video class="hero-img" src="'+s.vid+'" poster="'+(s.poster||s.img)+'" autoplay muted loop playsinline preload="metadata" style="aspect-ratio:9/16;object-fit:cover;max-height:72vh;margin:16px auto 0;width:auto;max-width:100%"></video>'; }
+    else { html+='<img class="hero-img" src="'+s.img+'" alt="Pipoca gourmet em saquinho de presente">'; }
     html+='<p class="lede">'+s.lede+'</p>';
     html+='<div class="sub">'+s.note+'</div>';
     scr.innerHTML=html; showCTA(s.cta+" →"); ctaBtn.onclick=next; return;
