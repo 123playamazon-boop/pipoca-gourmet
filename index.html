@@ -455,14 +455,14 @@ function render(){
       '<div class="step"><span class="n">2</span><div><b>Recebe o acesso na hora</b><p>Assim que o pagamento cai, chega no seu WhatsApp e e-mail o link da plataforma online — vídeos, receitas e guias, tudo liberado na mesma hora.</p></div></div>'+
       '<div class="step"><span class="n">3</span><div><b>Faz a primeira leva essa semana</b><p>Segue o passo a passo, monta seus primeiros saquinhos com uma panela que você já tem e começa a vender pra quem está do seu lado.</p></div></div>'+
       '</div>';
-    // Social proof — real WhatsApp prints (Bruno drops depo1..depo4.webp; slots hide until then)
-    html+='<div class="center" style="margin-top:22px"><div class="eyebrow">Quem já começou</div><h1 class="q" style="font-size:22px;margin-top:4px">Resultados de alunas reais</h1></div>';
+    // Social proof — real WhatsApp prints (Bruno drops depo1..depo4.webp; whole block hides until then)
+    html+='<div id="proofWrap" style="display:none"><div class="center" style="margin-top:22px"><div class="eyebrow">Quem já começou</div><h1 class="q" style="font-size:22px;margin-top:4px">Resultados de alunas reais</h1></div>';
     html+='<div class="proof" id="proofGrid">'+
-      '<figure><img loading="lazy" src="depo1.webp" alt="Depoimento de aluna" onerror="this.closest(\'figure\').style.display=\'none\'"></figure>'+
-      '<figure><img loading="lazy" src="depo2.webp" alt="Depoimento de aluna" onerror="this.closest(\'figure\').style.display=\'none\'"></figure>'+
-      '<figure><img loading="lazy" src="depo3.webp" alt="Depoimento de aluna" onerror="this.closest(\'figure\').style.display=\'none\'"></figure>'+
-      '<figure><img loading="lazy" src="depo4.webp" alt="Depoimento de aluna" onerror="this.closest(\'figure\').style.display=\'none\'"></figure>'+
-      '</div>';
+      '<figure><img loading="lazy" src="depo1.webp" alt="Depoimento de aluna" onload="document.getElementById(\'proofWrap\').style.display=\'block\'" onerror="this.closest(\'figure\').style.display=\'none\'"></figure>'+
+      '<figure><img loading="lazy" src="depo2.webp" alt="Depoimento de aluna" onload="document.getElementById(\'proofWrap\').style.display=\'block\'" onerror="this.closest(\'figure\').style.display=\'none\'"></figure>'+
+      '<figure><img loading="lazy" src="depo3.webp" alt="Depoimento de aluna" onload="document.getElementById(\'proofWrap\').style.display=\'block\'" onerror="this.closest(\'figure\').style.display=\'none\'"></figure>'+
+      '<figure><img loading="lazy" src="depo4.webp" alt="Depoimento de aluna" onload="document.getElementById(\'proofWrap\').style.display=\'block\'" onerror="this.closest(\'figure\').style.display=\'none\'"></figure>'+
+      '</div></div>';
     html+='<div class="gifts"><h3>Tudo que você recebe no Método Pipoca Gourmet</h3>'+
       gline("🍿","Receitas que se vendem sozinhas","Mais de 60 sabores gourmet campeões de venda, passo a passo.","R$97")+
       gline("⏳","O segredo da crocância de 20 dias","A técnica exata pra manter sua pipoca crocante por 20 dias sem murchar.","R$47")+
