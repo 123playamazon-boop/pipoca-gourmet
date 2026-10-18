@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Quiz Pipoca Gourmet — Desbloqueie seus presentes grátis</title>
+<title>Quiz Pipoca Gourmet — Descubra seu plano e desbloqueie seus bônus</title>
 <meta name="description" content="Responda algumas perguntas rápidas e veja seu presente crescer a cada resposta. Leva menos de 3 minutos.">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -145,6 +145,10 @@ h1.q{font-family:Archivo,system-ui,sans-serif;font-weight:800;font-size:23px;lin
 .gline .gv{flex:none;margin-left:auto;align-self:center;color:var(--muted);text-decoration:line-through;font-weight:800;font-size:13.5px}
 .gline.totalv{border-bottom:0;border-top:2px solid var(--line);margin-top:4px;padding-top:12px}
 .gline .gv.totalp{color:var(--gold);text-decoration:none;font-size:16px}
+.offerline{margin:14px auto 2px;max-width:520px;text-align:center;background:#fff6e6;border:2px solid #f0d49a;border-radius:16px;padding:14px 16px}
+.offerline .ol-top{font-size:15px;color:#3a2a10;line-height:1.35}
+.offerline .ol-price{font-family:Archivo,system-ui,sans-serif;font-weight:900;font-size:40px;color:var(--gold);line-height:1.05;margin:4px 0}
+.offerline .ol-sub{color:var(--muted);font-size:12.5px;font-weight:700}
 .pricebox{margin-top:16px;text-align:center;background:#fff6e6;border:2px solid #f0d49a;border-radius:18px;padding:20px 16px}
 .pricebox .from{color:var(--muted);text-decoration:line-through;font-weight:700}
 .pricebox .now{font-family:Archivo,system-ui,sans-serif;font-weight:900;font-size:44px;color:var(--gold);line-height:1}
@@ -239,12 +243,12 @@ var STEPS=[
   h:'Enquanto o Brasil briga com brigadeiro e bolo no pote, um docinho que <span class="hlg">virou febre nos EUA</span> chegou aqui <span class="hlg">quase sem concorrência</span> — e já está colocando <span class="hlr">R$600+ por semana</span> no bolso de mulheres que <b>nunca cozinharam na vida</b>.',
   img:"hero.webp",
   vid:"ad1.mp4", poster:"ad1-poster.webp",
-  lede:'É a <span class="hl">pipoca gourmet decorada no estilo americano</span> — o mesmo docinho que vende por US$8 o saquinho lá fora e viralizou no TikTok. Aqui no Brasil, quase ninguém faz ainda. Com uma panela e uns R$5 de ingredientes, você monta saquinhos que vendem por R$10 a R$15 e <b>praticamente se vendem sozinhos</b> — porque é bonito, é diferente e ninguém está cansado de ver. Responda algumas perguntas rápidas e desbloqueie presentes grátis pra começar essa semana — <b>mesmo que você nunca tenha cozinhado, nunca tenha vendido nada e não tenha nem R$50 pra investir.</b>',
-  note:"Como receber seus presentes: responda abaixo em menos de 3 minutos. Cada resposta aumenta o seu pacote de presentes grátis e libera o seu acesso exclusivo no final!",
-  cta:"Quero meus presentes"},
+  lede:'É a <span class="hl">pipoca gourmet decorada no estilo americano</span> — o mesmo docinho que vende por US$8 o saquinho lá fora e viralizou no TikTok. Aqui no Brasil, quase ninguém faz ainda. Com uma panela e uns R$5 de ingredientes, você monta saquinhos que vendem por R$10 a R$15 e <b>praticamente se vendem sozinhos</b> — porque é bonito, é diferente e ninguém está cansado de ver. Responda algumas perguntas rápidas e monte o seu plano — a cada resposta você desbloqueia um bônus que já vem incluso no método, pra você começar essa semana — <b>mesmo que você nunca tenha cozinhado, nunca tenha vendido nada e não tenha nem R$50 pra investir.</b>',
+  note:"Como funciona: responda abaixo em menos de 3 minutos. Cada resposta desbloqueia um bônus que já vem incluso no Método Pipoca Gourmet e monta o seu plano no final!",
+  cta:"Começar meu plano"},
 
- {k:"form",h:"Qual nome colocamos no seu presente?",label:"Seu primeiro nome",cta:"Continuar"},
- {k:"reward",emo:"🎁",title:"Presente reservado no seu nome",val:19},
+ {k:"form",h:"Qual nome colocamos no seu plano?",label:"Seu primeiro nome",cta:"Continuar"},
+ {k:"reward",emo:"🎁",title:"Bônus reservado no seu nome",val:19},
 
  {k:"q",h:"{nome}, você já trabalhou com produtos artesanais como pipoca gourmet ou docinhos antes?",
   opts:["Sim, já sou profissional.","Sim, faço como hobby ou pra renda extra.","Não, mas quero aprender pra começar a ganhar dinheiro.","Não, só quero aprender por diversão, como hobby."]},
@@ -329,13 +333,13 @@ var STEPS=[
 
  {k:"reward",emo:"📈",title:"Seu mapa de faturamento dos primeiros 30 dias",val:37},
 
- {k:"q",h:"Se você desbloquear esses presentes grátis, promete aproveitar essa oportunidade ao máximo?",
+ {k:"q",h:"Se você desbloquear esses bônus, promete aproveitar essa oportunidade ao máximo?",
   opts:["Talvez.","Provavelmente.","Sim, com certeza!"]},
 
  {k:"q",h:"{nome}, você está pronta pra ter resultados como as mulheres que já estão lucrando com pipoca gourmet todo mês?",
   opts:["Talvez!","SIM!","COM CERTEZA!"]},
 
- {k:"loading",h:"Aguarde enquanto seus resultados e presentes grátis estão sendo gerados...",sub:"Desbloqueando seus presentes..."},
+ {k:"loading",h:"Aguarde enquanto seu plano e seus bônus estão sendo gerados...",sub:"Montando seu plano..."},
 
  {k:"result"}
 ];
@@ -381,7 +385,7 @@ function render(){
   if(s.k==="reward"){
     if(s.head) html+='<h1 class="q">'+p(s.head)+'</h1>';
     if(s.body) html+='<p class="lede" style="font-size:15.5px">'+p(s.body)+'</p>';
-    html+='<div class="reward"><span class="emo">'+s.emo+'</span><div><b>'+s.title+'</b><small>+ R$'+s.val+' no seu presente 🎉</small></div></div>';
+    html+='<div class="reward"><span class="emo">'+s.emo+'</span><div><b>'+s.title+'</b><small>+ R$'+s.val+' em bônus incluso 🎉</small></div></div>';
     scr.innerHTML=html; setEarn(s.val);
     showCTA("Continuar →"); ctaBtn.onclick=next; return;
   }
@@ -437,9 +441,10 @@ function render(){
   }
 
   if(s.k==="result"){
-    html+='<div class="center"><div class="eyebrow">🎉 Presentes desbloqueados</div>';
-    html+='<h1 class="q" style="margin-top:6px">Prontinho, '+(name||"amiga")+'! Você desbloqueou R$'+earned+' em presentes grátis dentro do Método Pipoca Gourmet</h1></div>';
-    html+='<p class="lede center" style="font-size:15px">Tudo abaixo está reservado no seu nome. Toque no botão e receba acesso na hora — comece a sua primeira leva ainda essa semana.</p>';
+    html+='<div class="center"><div class="eyebrow">🎉 Bônus desbloqueados</div>';
+    html+='<h1 class="q" style="margin-top:6px">Prontinho, '+(name||"amiga")+'! Você desbloqueou R$'+earned+' em bônus inclusos no Método Pipoca Gourmet</h1></div>';
+    html+='<div class="offerline"><div class="ol-top">Leve o <b>Método Pipoca Gourmet completo</b> + <b>R$'+earned+' em bônus</b> por apenas</div><div class="ol-price">R$'+PRICE+'</div><div class="ol-sub">Pagamento único · acesso vitalício na hora · pelo Pix ou cartão</div></div>';
+    html+='<p class="lede center" style="font-size:15px">Comece a sua primeira leva ainda essa semana. Assim que o pagamento cair, o acesso chega na hora no seu WhatsApp e e-mail.</p>';
     if(VIDEO_SRC){ html+='<div class="vwrap"><video controls playsinline poster="hero.webp" style="width:100%;height:100%;object-fit:cover"><source src="'+VIDEO_SRC+'" type="video/mp4"></video></div>'; }
     // Instructor
     html+='<div class="instr"><img loading="lazy" src="instr.webp" alt="Carla Mendes — Especialista em Pipoca Gourmet"><div><div class="eyebrow">Sua instrutora</div><b>Carla Mendes</b><p>Especialista em pipoca gourmet. Ela te guia por todo o processo passo a passo — da sua primeira leva até as encomendas grandes.</p></div></div>';
@@ -500,7 +505,7 @@ function render(){
     html+='<p class="sub center" style="margin-top:16px">Depois do pagamento, você recebe no WhatsApp e no e-mail o acesso à plataforma online — na hora.</p>';
     html+='<div class="disc">Resultados não são garantidos e variam de pessoa pra pessoa. Os valores mostrados são exemplos ilustrativos, não uma promessa de ganhos. Este é um produto educacional digital.</div>';
     scr.innerHTML=html;
-    showCTA("Quero meus presentes →","🔒 Checkout seguro · acesso na hora");
+    showCTA("Quero garantir por R$"+PRICE+" →","🔒 Checkout seguro · acesso na hora");
     cnote.innerHTML="🔒 Checkout seguro · acesso na hora";
     var u=document.createElement('div'); u.className='urg'; u.textContent='⏳ Preço de lançamento — só nesta rodada, depois volta a subir'; cnote.parentNode.insertBefore(u,cnote.nextSibling);
     ctaBtn.onclick=function(){
